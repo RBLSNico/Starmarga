@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://boxqvwk1r27ns"]
+
+[ext_resource type="Texture2D" uid="uid://bua4oshvgbqt0" path="res://Flower 6 - PINK.png" id="1_eafwn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1krke"]
+radius = 33.0
+height = 84.0
+
+[node name="Flower" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 9.53674e-07)
+scale = Vector2(3.2, 2.6371)
+texture = ExtResource("1_eafwn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1krke")

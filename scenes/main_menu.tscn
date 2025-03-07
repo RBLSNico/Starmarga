@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://btnckjy4lg06s"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_fftu3"]
+[ext_resource type="Texture2D" uid="uid://dmbad3g7qdc8f" path="res://pexels-alex-andrews-821644.jpg" id="1_ry7od"]
+[ext_resource type="Texture2D" uid="uid://cqfdowpwwne3o" path="res://image-removebg-preview (3).png" id="1_uvw65"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_fftu3")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ry7od")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -374.5
+offset_top = -277.0
+offset_right = 374.5
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_uvw65")
+
+[node name="Play" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.0
+offset_top = 73.5
+offset_right = 77.0
+offset_bottom = 164.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "PLAY"
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -97.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Collect all the pears, flowers, and SAVE THE JUNER!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

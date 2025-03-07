@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://dpoc0kbu3nty4"]
+
+[ext_resource type="Texture2D" uid="uid://bnn0s6u0fex0h" path="res://Dog_White.png" id="1_6p5mm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hfc8"]
+atlas = ExtResource("1_6p5mm")
+region = Rect2(0, 0, 64, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubvaq"]
+atlas = ExtResource("1_6p5mm")
+region = Rect2(64, 0, 64, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0nm5"]
+atlas = ExtResource("1_6p5mm")
+region = Rect2(128, 0, 64, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkqxf"]
+atlas = ExtResource("1_6p5mm")
+region = Rect2(192, 0, 64, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0jss"]
+atlas = ExtResource("1_6p5mm")
+region = Rect2(256, 0, 64, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bb3yo"]
+atlas = ExtResource("1_6p5mm")
+region = Rect2(320, 0, 64, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hr3gf"]
+atlas = ExtResource("1_6p5mm")
+region = Rect2(384, 0, 64, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v24rp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hfc8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubvaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0nm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkqxf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0jss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bb3yo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hr3gf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kso02"]
+size = Vector2(111, 86)
+
+[node name="Juner" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.999996, 1)
+scale = Vector2(2.3125, 2.79545)
+sprite_frames = SubResource("SpriteFrames_v24rp")
+autoplay = "default"
+frame_progress = 0.769426
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.5, 11)
+shape = SubResource("RectangleShape2D_kso02")
